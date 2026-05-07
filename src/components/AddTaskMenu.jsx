@@ -14,6 +14,15 @@ export default function AddTaskMenu({ onClose, setTasks }) {
         return; 
     } 
     
+    const newTask = {
+      title,
+      description: desc,
+      priority,
+      date,
+      tags
+    };
+
+    setTasks((prev) => [...prev, newTask]);
     onClose();
   };
 
